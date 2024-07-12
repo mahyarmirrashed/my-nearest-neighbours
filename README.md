@@ -1,4 +1,4 @@
-# My Nearest Neighbour
+# My Nearest Neighbours
 
 ## Project Overview
 
