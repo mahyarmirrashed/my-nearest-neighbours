@@ -28,3 +28,12 @@ communications, and real-time data handling.
   traffic and computational demands.
 - **Interactive UI**: Each client node implements a terminal-based user
   interface for displaying real-time updates of node positions and interactions.
+
+## Objectives
+
+- To explore and demonstrate the integration of MQTT with distributed system
+  architecture.
+- To utilize Kubernetes for managing a scalable cluster of broker and client
+  services.
+- To develop proficiency in Go for network programming and Kubernetes for
+  orchestration and deployment.
