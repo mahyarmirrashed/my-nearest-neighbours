@@ -16,3 +16,15 @@ and, calculate and display their proximity to their nearest neighbours.
 
 This setup is intended to showcase distributed systems concepts, network
 communications, and real-time data handling.
+
+## Highlights
+
+- **Multiple MQTT Brokers**: Brokers are interconnected, allowing messages to be
+  synchronized across the entire network.
+- **Client Nodes**: Nodes are implemented in Golang and handle random walks and
+  proximity calculations dynamically.
+- **Scalability**: Leveraging Kubernetes, the system can efficiently scale up to
+  handle numerous client nodes, demonstrating the handling of increased network
+  traffic and computational demands.
+- **Interactive UI**: Each client node implements a terminal-based user
+  interface for displaying real-time updates of node positions and interactions.
