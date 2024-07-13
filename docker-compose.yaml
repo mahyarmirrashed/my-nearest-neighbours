@@ -4,6 +4,12 @@ services:
     image: "eclipse-mosquitto:2.0"
     volumes:
       - "./src/broker/global/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro"
+    healthcheck:
+      test: ["CMD-SHELL", "mosquitto_sub -t '$$SYS/#' -C 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 1s
 
   local-broker-1:
     build:
