@@ -2,6 +2,9 @@
 listener 1883
 protocol mqtt
 
+# Allow anonymous connections
+allow_anonymous true
+
 # Bridge configuration
 connection local-to-global
 address {{BRIDGE_ADDRESS}}
