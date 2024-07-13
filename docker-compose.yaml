@@ -11,16 +11,12 @@ services:
       retries: 3
       start_period: 1s
 
-  local-broker-1:
+  local-broker:
     build:
       context: "./src/broker/local"
     environment:
       BRIDGE_HOSTNAME: "global-broker"
       BRIDGE_PORT: "1883"
-
-  local-broker-2:
-    build:
-      context: "./src/broker/local"
-    environment:
-      BRIDGE_HOSTNAME: "global-broker"
-      BRIDGE_PORT: "1883"
+    deploy:
+      mode: replicated
+      replicas: 2
