@@ -4,3 +4,17 @@ services:
     image: "eclipse-mosquitto:2.0"
     volumes:
       - "./src/broker/global/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro"
+
+  local-broker-1:
+    build:
+      context: "./src/broker/local"
+    environment:
+      BRIDGE_HOSTNAME: "global-broker"
+      BRIDGE_PORT: "1883"
+
+  local-broker-2:
+    build:
+      context: "./src/broker/local"
+    environment:
+      BRIDGE_HOSTNAME: "global-broker"
+      BRIDGE_PORT: "1883"

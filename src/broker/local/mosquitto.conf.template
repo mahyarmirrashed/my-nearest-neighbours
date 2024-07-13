@@ -1,0 +1,9 @@
+# Listener setup
+listener 1883
+protocol mqtt
+
+# Bridge configuration
+connection local-to-global
+address {{BRIDGE_ADDRESS}}
+topic # both 0
+try_private true
