@@ -1,0 +1,6 @@
+---
+services:
+  global-broker:
+    image: "eclipse-mosquitto:2.0"
+    volumes:
+      - "./src/broker/global/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro"
