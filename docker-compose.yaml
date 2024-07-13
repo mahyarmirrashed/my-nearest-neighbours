@@ -29,3 +29,13 @@ services:
     depends_on:
       global-broker:
         condition: service_healthy
+
+  client:
+    build:
+      context: "./src/client"
+    deploy:
+      mode: replicated
+      replicas: 2
+    depends_on:
+      local-broker:
+        condition: service_healthy
