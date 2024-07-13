@@ -23,7 +23,6 @@ RUN \
   go install github.com/air-verse/air@latest
 
 COPY --from=build /app /app
-
 COPY .air.toml /app
 
 CMD [ "air" ]
