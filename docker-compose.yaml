@@ -20,3 +20,6 @@ services:
     deploy:
       mode: replicated
       replicas: 2
+    depends_on:
+      global-broker:
+        condition: service_healthy
